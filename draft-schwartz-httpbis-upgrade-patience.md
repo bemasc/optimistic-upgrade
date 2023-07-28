@@ -9,11 +9,11 @@ number:
 date:
 consensus: true
 v: 3
-area: ART
-workgroup: HTTPBIS
+area: "Applications and Real-Time"
+workgroup: "HTTP"
 keyword:
 venue:
-  github: bemasc/http-upgrade
+  github: "bemasc/http-upgrade"
 updates: RFC 9110, RFC 9298
 
 author:
