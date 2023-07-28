@@ -14,7 +14,7 @@ workgroup: "HTTP"
 keyword:
 venue:
   github: "bemasc/http-upgrade"
-updates: RFC 9110, RFC 9298
+updates: 9110, 9298
 
 author:
  -
