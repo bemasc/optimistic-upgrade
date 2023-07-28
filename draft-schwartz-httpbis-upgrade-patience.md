@@ -59,7 +59,7 @@ This section documents requirements for clients of protocols that rely on HTTP U
 
 ## Patience
 
-If the server accepts the upgrade, it interprets the subsequent bytes in accordance with the new protocol.  If it rejects the upgrade, it interprets those bytes as HTTP/1.1.  However, the client doesn't know which interpretation the server will take until it receives the server's response status code.  To prevent protocol confusion, clients MUST NOT send any data after an HTTP/1.1 request until it learns whether the upgrade was accepted.
+If the server accepts the upgrade, it interprets the subsequent bytes in accordance with the new protocol.  If it rejects the upgrade, it interprets those bytes as HTTP/1.1.  However, the client doesn't know which interpretation the server will take until it receives the server's response status code.  To prevent protocol confusion, a client MUST NOT send any data after an HTTP/1.1 request until it learns whether the upgrade was accepted.
 
 Protocol confusion is not limited to incidental failures: it can also lead to serious security problems.  Request smuggling attacks are possible when the HTTP client is passing data to the server from an untrusted party, as is common in HTTP.  In the event of protocol confusion, this data could be misparsed as an HTTP request from the client, potentially authenticated by a TLS client certificate.  This could allow the attacker to exercise privileges that are reserved for the client.
 
