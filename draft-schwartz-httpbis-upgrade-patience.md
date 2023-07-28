@@ -63,11 +63,11 @@ If the server accepts the upgrade, it interprets the subsequent bytes in accorda
 
 Protocol confusion is not limited to incidental failures: it can also lead to serious security problems.  Request smuggling attacks are possible when the HTTP client is passing data to the server from an untrusted party, as is common in HTTP.  In the event of protocol confusion, this data could be misparsed as an HTTP request from the client, potentially authenticated by a TLS client certificate.  This could allow the attacker to exercise privileges that are reserved for the client.
 
-A related category of attacks uses request smuggling to exploit vulnerabilities in the server's request parsing logic.  These attacks apply when the HTTP client is trusted, but the payload data source is not.
+A related category of attacks use request smuggling to exploit vulnerabilities in the server's request parsing logic.  These attacks apply when the HTTP client is trusted, but the payload data source is not.
 
 ## Tolerance
 
-If the server rejects the Upgrade, the connection can continue to be used for HTTP/1.1.  There is no requirement to close the connection in response to an Upgrade rejection, and keeping the connection open has performance advantages if additional HTTP requests to this server are likely.  In these situations, clients SHOULD NOT close the connection in response to a rejected upgrade.
+If the server rejects the upgrade, the connection can continue to be used for HTTP/1.1.  There is no requirement to close the connection in response to an Upgrade rejection, and keeping the connection open has performance advantages if additional HTTP requests to this server are likely.  In these situations, clients SHOULD NOT close the connection in response to a rejected upgrade.
 
 # Impact on Existing Upgrade Tokens
 
