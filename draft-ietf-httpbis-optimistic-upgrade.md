@@ -3,17 +3,17 @@ title: "Security Considerations for Optimistic Use of HTTP Upgrade"
 abbrev: "Optimistic HTTP Upgrade Security"
 category: std
 
-docname: draft-schwartz-httpbis-optimistic-upgrade-latest
+docname: draft-ietf-httpbis-optimistic-upgrade-latest
 submissiontype: IETF
 number:
 date:
 consensus: true
 v: 3
-area: "Applications and Real-Time"
+area: "Web and Internet Transport"
 workgroup: "HTTPBIS"
 keyword:
 venue:
-  github: "bemasc/http-upgrade"
+  github: "httpwg/optimistic-upgrade"
 updates: 9298
 
 author:
